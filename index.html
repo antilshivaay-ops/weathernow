@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeatherNow</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <h1>Weather<span>Now</span></h1>
+  <p class="subtitle">Real-time weather for any city</p>
+
+  <div class="search-bar">
+    <input type="text" id="city-input" placeholder="Enter city name..." />
+    <button id="search-btn">Search</button>
+  </div>
+  <button class="loc-btn" id="loc-btn">📍 Use My Location</button>
+
+  <p class="error" id="error-msg">City not found. Please try again.</p>
+  <p class="loading" id="loading">Fetching weather...</p>
+
+  <div class="card" id="weather-card">
+    <div class="city-name" id="city-name"></div>
+    <div class="date" id="date"></div>
+    <div class="main-weather">
+      <div class="weather-icon" id="w-icon"></div>
+      <div>
+        <div class="temp" id="temp"></div>
+        <div class="feels" id="feels"></div>
+      </div>
+    </div>
+    <div class="desc" id="desc"></div>
+    <div class="stats">
+      <div class="stat"><div class="stat-label">Humidity</div><div class="stat-value" id="humidity"></div></div>
+      <div class="stat"><div class="stat-label">Wind Speed</div><div class="stat-value" id="wind"></div></div>
+      <div class="stat"><div class="stat-label">Visibility</div><div class="stat-value" id="visibility"></div></div>
+      <div class="stat"><div class="stat-label">Pressure</div><div class="stat-value" id="pressure"></div></div>
+    </div>
+    <div class="forecast">
+      <h3>5-Day Forecast</h3>
+      <div class="forecast-grid" id="forecast-grid"></div>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
